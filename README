@@ -1,0 +1,42 @@
+Cam Cook
+
+ 1) what you did
+	List of Shell Commands
+	----------------
+	type - 1 arg prints contents
+	execute - 1 arg executes program
+	delete - 1 arg deletes file
+	dir - no arg lists directory
+	copy - 2 arg copies arg1 to arg2
+	create - 1 arg creates a file from input
+	kill - 1 arg kills a process with pid
+	List of interrupt 21
+	--------------------
+	printString - ax=0, bx=address to print
+	readString - ax=1, bx= address to store
+	readSector - ax=2,bx=address to store, cx = sector
+	readFile - ax =3, bx = file name cx= address to store
+	executeProgram ax=4, bx=adress of name  cx=segment
+	terminate (go back to shell) ax=5
+        writeSector ax=6 bx =buffer cx =sector
+        deleteFile ax =7 bx=filename
+	writeFile ax =8 bx =filename cx =buffer dx =numOfSectors
+        copyFile ax ==9 bx = filename from cx= filename to
+	killProcess ax =10 bx =pid
+	printDir ax =11
+	
+
+
+	
+ 2) how to verify it.
+	All the example code in OSProjectD.doc functions.
+
+ 3) Compile
+	floppya.img is ready.
+	
+	If you want to recompile...
+	java -jar x86helper.jar
+	./loadFile shell
+	./loadFile message.txt
+	./loadFile tstprg
+	./loadFile tstprg1
